@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot name="simple_road">
+
+  <!-- Define the material for the road -->
+  <material name="road_material">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+
+  <!-- Link for the road -->
+  <link name="road_link">
+    <visual>
+      <geometry>
+        <box size="5 50 0.01"/> <!-- Width: 5m, Length: 50m, Thickness: 1cm -->
+      </geometry>
+      <material name="road_material"/>
+    </visual>
+  </link>
+
+  <!-- Joint to attach the road to the world -->
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="road_link"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+</robot>
