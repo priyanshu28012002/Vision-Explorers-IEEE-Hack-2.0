@@ -14,7 +14,7 @@ from launch_ros.actions import Node
 from launch.actions import ExecuteProcess
 from ament_index_python.packages import get_package_prefix
 
-pkg_name='eyantra_warehouse'
+pkg_name='my_robot'
 
 def generate_launch_description():
 
